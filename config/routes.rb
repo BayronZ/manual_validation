@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  resources :stories
-  root "stories#index"
+  get 'new_user/new'
+  resources :sessions, only: [:new, :create, :destroy]
+  root 'home#index'
 end
